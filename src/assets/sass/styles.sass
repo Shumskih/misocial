@@ -19,7 +19,7 @@ html
     background: url(../img/main-bg.jpg) no-repeat center
     background-size: cover
 
-    &-overlay
+    &-overlay, .call-to-action-overlay
         position: absolute
         left: 0
         top: 0
@@ -232,3 +232,109 @@ html
                 transition: 0.2s
                 color: #fff
                 background-color: #6e45e2
+
+.call-to-action
+    background: url(../img/down-bg.jpg)
+    bacground-size: cover
+    text-align: center
+    padding: 15rem
+    position: relative
+    color: #fff
+
+    .wrap
+        z-index: 2
+        position: relative
+
+        & span
+            font-size: 1.4rem
+            text-transform: uppercase
+            font-family: 'mavenpro-bold'
+
+        & h4
+            font-family: 'mavenpro-medium'
+            font-size: 6rem
+            margin: 2.5rem auto 2.8rem
+
+        & .cta-btn
+            display: inline-block
+            border: none
+            background-color: #fff
+            color: #c2c9db
+            width: 19rem
+            height: 5rem
+            font-size: 1.4rem
+            text-transform: uppercase
+            font-family: 'mavenpro-bold'
+            border-radius: 10rem
+            margin-right: 1rem
+            transition: 0.2s
+
+            &:hover
+                background-color: #6e45e2
+                color: #fff
+                cursor: pointer
+                transition: 0.2s
+
+.footer-wrap
+    display: flex
+    justify-content: center;
+
+    & .footer
+        height: 10vh
+        width: 90%
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &-menu
+            width: 50%
+
+            & ul
+                display: flex
+                justify-content: space-around
+                list-style: none
+            
+            &-link
+                font-size: 1.4rem
+                text-decoration: none
+                color: #6a6a77
+                font-family: 'mavenpro-medium'
+
+        &-get-started
+            font-size: 1.2rem
+            margin-left: 100px
+            border: 1px solid #fff
+            padding: 2.1rem 3.3rem
+            border-radius: 100px
+            text-transform: uppercase
+            background-color: #6e45e2
+            color: #fff
+
+.line
+    display: block
+    width: 90%
+    height: 0.1rem
+    background-color: #333
+    margin: 1rem auto
+    opacity: 0.2
+
+.legal
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-left: 5%
+    padding-right: 5%
+    margin-bottom: 2rem
+
+    & .copy
+        color: #6a6a77
+        font-size: 1.4rem
+        font-family: 'mavenpro-medium'
+
+    & .social-links
+        & a
+            color: #6a6a77
+            font-size: 1.4rem
+            display: inline-block
+            margin-right: 1rem
+
