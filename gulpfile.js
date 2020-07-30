@@ -3,20 +3,15 @@ var gulp = require('gulp'), //есть
 
 	concat = require('gulp-concat'), //есть
 	uglify = require('gulp-uglify-es').default,
-	rename = require('gulp-rename'), //есть
-	del = require('del'), //есть
 	cache = require('gulp-cache'), //есть
 	rigger = require('gulp-rigger'), //нет    
 	sass = require('gulp-sass'), //есть
-	sourcemaps = require('gulp-sourcemaps'), //нет
-	//cssmin      = require('gulp-minify-css'),      //есть   старый
+	sourcemaps = require('gulp-sourcemaps'), //нет      //есть   старый
 	cssnano = require('gulp-cssnano'), //есть
 	imagemin = require('gulp-imagemin'), //есть
-	pngquant = require('imagemin-pngquant'), //есть   
-	//spritesmith = require('gulp.spritesmith'),   //нет
+	pngquant = require('imagemin-pngquant'), //есть
 	plumber = require('gulp-plumber'), //есть
 	autoprefixer = require('gulp-autoprefixer'),
-	copy = require('gulp-contrib-copy'),
 	browserSync = require('browser-sync');
 
 let path = {
