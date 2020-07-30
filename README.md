@@ -6,5 +6,9 @@ Compiled and minimized code is in "dist" folder.
 Clone repo and type in console:
 
 ```console
+> npm i
+```
+
+```console
 > gulp
 ```
