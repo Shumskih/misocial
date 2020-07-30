@@ -44,7 +44,10 @@ html
                 justify-content: flex-end
                 list-style: none
 
-            &-link, &-hamburger
+                & li:last-child &-link
+                    width: 0
+
+            &-link
                 font-size: 1.6rem
                 color: #ffffff
                 text-decoration: none
@@ -74,23 +77,25 @@ html
                     transition: width .3s ease-in-out;
                     transform: translateX(-50%);
 
-                &:hover::after, &:focus::after
+                &:hover:last-of-type::after
                     width: 100%
 
-                &.get-started-btn
-                    font-size: 1.2rem
-                    font-weight: bold
-                    line-height: 1.5
-                    text-transform: uppercase
-                    border: 1px solid #fff
-                    padding: 10px 20px
-                    border-radius: 100px
-                    transition: 0.2s
+        & .get-started-btn
+            color: #ffffff
+            text-decoration: none
+            font-size: 1.2rem
+            font-weight: bold
+            line-height: 1.5
+            text-transform: uppercase
+            border: 1px solid #fff
+            padding: 10px 20px
+            border-radius: 100px
+            transition: 0.2s
 
-                    &:hover
-                        color: #6e45e2
-                        background-color: #fff
-                        transition: 0.2s
+            &:hover
+                color: #6e45e2
+                background-color: #fff
+                transition: 0.2s
 
     &-text
         display: flex
@@ -382,7 +387,7 @@ html
     width: 100%
     list-style: none
     font-size: 3rem
-    line-height: 10rem
+    line-height: 5rem
     background-color: #6e45e2
     z-index: 99
     display: flex
@@ -392,29 +397,70 @@ html
     transform: translateX(100%)
     transition: 0.2s
 
+    & li:last-of-type
+        margin-top: 4rem
+
     &__active
         transform: translateX(0)
 
-    &-link, &-hamburger
+    &-link
         display: none
         color: #fff
         font-size: 3rem
         text-decoration: none
+        padding: 3rem 2.5rem
+        position: relative
 
-        &.get-started-btn
-            font-size: 2rem
-            line-height: 5rem
-            font-weight: bold
-            text-transform: uppercase
-            border: 1px solid #fff
-            padding: 1rem 4rem
-            border-radius: 10rem
-            transition: 0.2s
-
-            &:hover
-                color: #6e45e2
+        &.active
+            position: relative
+            &::after
                 background-color: #fff
-                transition: 0.2s
+                content: ""
+                height: 0.1rem
+                width: 100%
+                left: 50%
+                bottom: 0
+                position: absolute
+                transition: width .3s ease-in-out;
+                transform: translateX(-50%);
+
+        &::after
+            background-color: #fff
+            content: ""
+            height: 0.1rem
+            width: 0
+            left: 50%
+            bottom: 0
+            position: absolute
+            transition: width .3s ease-in-out;
+            transform: translateX(-50%);
+
+        &:hover:last-of-type::after
+            width: 100%
+
+    &-hamburger
+        display: none
+        color: #fff
+        font-size: 3rem
+        text-decoration: none
+        padding: 3rem 2.5rem
+                
+
+    & .get-started-btn
+        color: #ffffff
+        text-decoration: none
+        font-size: 2rem
+        font-weight: bold
+        text-transform: uppercase
+        border: 1px solid #fff
+        padding: 1.8rem 4rem
+        border-radius: 10rem
+        transition: 0.2s
+
+        &:hover
+            color: #6e45e2
+            background-color: #fff
+            transition: 0.2s
 
 .close-menu
     position: fixed
