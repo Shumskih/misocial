@@ -2,11 +2,10 @@
 var gulp = require('gulp'), //есть
 
 	concat = require('gulp-concat'), //есть
+	uglify = require('gulp-uglify-es').default,
 	rename = require('gulp-rename'), //есть
 	del = require('del'), //есть
 	cache = require('gulp-cache'), //есть
-
-	uglify = require('gulp-uglifyjs'), //есть   
 	rigger = require('gulp-rigger'), //нет    
 	sass = require('gulp-sass'), //есть
 	sourcemaps = require('gulp-sourcemaps'), //нет
@@ -21,13 +20,13 @@ var gulp = require('gulp'), //есть
 	browserSync = require('browser-sync');
 
 let path = {
-	js: ['src/js'],
+	js: 'src/js/*.js',
 	js_build: 'dist/js',
 
 	scripts: ['src/js/**/*.js'],
 	scripts_build: '',
 
-	css: ['src/assets/sass/styles.sass', '!node_modules/**/*.sass', 'gulp/**/*.sass'],
+	css: ['src/assets/sass/*.sass', '!src/assets/_media.sass', '!src/assets/_fonts.sass', '!node_modules/**/*.sass'],
 	css_build: ['dist/assets/css/'],
 
 	img: 'src/assets/img/**/*',
@@ -72,14 +71,15 @@ gulp.task('fonts:copy', function (done) {
 
 gulp.task('js:build', function (done) {
 	gulp.src(path.js) // Найдем наш main файл         
-		.pipe(plumber())
+		// .pipe(plumber())
 		.pipe(rigger()) // Прогоним через rigger
-		.pipe(concat('libs.min.js'))
+		.pipe(concat('main.js'))
 		.pipe(sourcemaps.init()) // Инициализируем sourcemap
 		.pipe(uglify()) // Сожмем наш js
 		.pipe(sourcemaps.write()) // Пропишем карты
-		.pipe(plumber.stop())
-		.pipe(gulp.dest(path.js_build)); // Выплюнем готовый файл в build
+		// .pipe(plumber.stop())
+		.pipe(gulp.dest(path.js_build))
+		.pipe(browserSync.stream()); // Выплюнем готовый файл в build
 
 	done();
 });
