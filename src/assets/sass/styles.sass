@@ -1,3 +1,4 @@
+
 @import '../css/normalize'
 @import '../css/animate'
 @import '_fonts'
@@ -5,7 +6,7 @@
 *, *:before, *:after
     box-sizing: border-box
 body
-    font-family: 'mavenpro-regular', sans-serif
+    font-family: 'MavenPro', sans-serif
     margin: 0
 html
     font-size: 10px
@@ -16,7 +17,6 @@ html
     justify-content: space-between
     align-items: center
     height: 100vh
-    min-height: 600px
     background: url(../img/main-bg.jpg) no-repeat center
     background-size: cover
 
@@ -85,7 +85,7 @@ html
             color: #ffffff
             text-decoration: none
             font-size: 1.2rem
-            font-weight: bold
+            font-weight: 700
             line-height: 1.5
             text-transform: uppercase
             border: 1px solid #fff
@@ -110,7 +110,9 @@ html
         & span
             text-transform: uppercase
             font-size: 1.4rem
+            font-weight: 700
             display: inline-block
+            margin-bottom: 2rem
 
             &::after
                 content: ''
@@ -131,9 +133,9 @@ html
                 margin-right: 10px
 
         & h1
-            font-family: 'mavenpro-regular', sans-serif
             margin: 0.5rem
             font-size: 8.6rem
+            font-weight: 500
 
         & p
             font-size: 1.8rem
@@ -166,7 +168,7 @@ html
 
         & span
             text-transform: uppercase
-            font-family: 'mavenpro-bold' 
+            font-weight: 700
             font-size: 1.4rem
             color: #9fa4af
 
@@ -191,6 +193,7 @@ html
         & h2
             color: #4f4f6f
             font-size: 6rem
+            font-weight: 500
             margin: 0
 
         & p
@@ -226,7 +229,7 @@ html
 
             span
                 color: #9fa4af
-                font-family: "mavenpro-bold"
+                font-weight: 700
                 font-size: 1.4rem
                 line-height: 3.2rem
                 text-transform: uppercase
@@ -235,14 +238,15 @@ html
             h4
                 color: #4f4f6f
                 margin: 1rem
-                font-family: 'mavenpro-medium'
-                font-size: 3.5rem
+                font-weight: 500
+                font-size: 6rem
 
                 & sub
-                    font-size: 1.4rem
+                    font-size: 1.8rem
+                    bottom: -.1em
 
                 & sup
-                    font-size: 1.4rem
+                    font-size: 1.6rem
                     vertical-align: super
                     margin-right: 0.5rem
 
@@ -261,7 +265,7 @@ html
             color: #9fa4af
             text-transform: uppercase
             font-size: 1.2rem
-            font-family: 'mavenpro-bold'
+            font-weight: 700
             padding: 2.1rem 5.4rem
             border-radius: 10rem
             margin-top: 4.9rem
@@ -288,10 +292,10 @@ html
         & span
             font-size: 1.4rem
             text-transform: uppercase
-            font-family: 'mavenpro-bold'
+            font-weight: 700
 
         & h4
-            font-family: 'mavenpro-medium'
+            font-weight: 500
             font-size: 6rem
             margin: 2.5rem auto 2.8rem
 
@@ -304,7 +308,7 @@ html
             height: 5rem
             font-size: 1.4rem
             text-transform: uppercase
-            font-family: 'mavenpro-bold'
+            font-weight: 700
             border-radius: 10rem
             margin-right: 1rem
             transition: 0.2s
@@ -338,7 +342,7 @@ html
                 font-size: 1.4rem
                 text-decoration: none
                 color: #6a6a77
-                font-family: 'mavenpro-medium'
+                font-weight: 500
 
         &-get-started
             font-size: 1.2rem
@@ -369,7 +373,7 @@ html
     & .copy
         color: #6a6a77
         font-size: 1.4rem
-        font-family: 'mavenpro-medium'
+        font-weight: 500
 
     & .social-links
         & a
@@ -451,7 +455,7 @@ html
         color: #ffffff
         text-decoration: none
         font-size: 2rem
-        font-weight: bold
+        font-weight: 700
         text-transform: uppercase
         border: 1px solid #fff
         padding: 1.8rem 4rem
@@ -468,7 +472,7 @@ html
     right: 5rem
     top: 0
     font-size: 5rem
-    font-family: 'mavenpro-bold'
+    font-weight: 700
     color: #fff
 
     &:hover
