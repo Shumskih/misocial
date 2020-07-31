@@ -1,6 +1,10 @@
 @media (max-width: 1199px)
     html
         font-size: 8px
+    .legal
+        & .social-links
+            & a
+                font-size: 2rem
 @media (max-width: 991px)
     html
         font-size: 7px
@@ -13,14 +17,34 @@
             display: block
 
     .table
-
         .price
             &-tags
                 flex-direction: column
+                width: 100%
 
             &-tag
-                width: 90%
-                margin: 2rem auto
+                display: flex
+                margin-right: 0
+                width: 50%
+
+                &:not(:first-of-type)
+                    margin-top: 1.5rem
+
+
+                & h4
+                    font-size: 8.5rem
+
+                    & sub
+                        font-size: 2.5rem
+
+                    & sup
+                        font-size: 2rem
+
+                & p
+                    font-size: 2rem
+                    line-height: 1.8
+                    width: 75%
+                    margin-top: 4rem
 
     .footer
         &-wrap
@@ -33,6 +57,11 @@
     .legal
         .social-links
             font-size: 3rem !important
+@media (max-width: 768px)
+    .table
+        .price
+            &-tag
+                width: 80%
 @media (max-width: 576px)
     .main-text
         & span
@@ -49,6 +78,35 @@
                 margin-top: 1.5rem
                 margin-bottom: 1rem
                 font-size: 6rem
-            & p
-                line-height: 1.8
+
+        .price
+            &-tag
+                width: 100%
+
+                & p
+                    font-size: 1.8rem
+                    width: 80%
+
+    .call-to-action
+        padding: 10rem 0 10rem 0
+        .wrap
+            & span
+                font-size: 1.4rem
+                text-transform: uppercase
+                font-weight: 700
+
+            & h4
+                font-weight: 500
+                font-size:  5rem
+                margin: 2.5rem auto 2.8rem
+
+            & .cta-btn
+                margin-top: 2rem
+    .legal
+        & .copy
+            width: 60%
+        & .social-links
+            & a
+                font-size: 2rem
+
 

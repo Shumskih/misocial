@@ -86,11 +86,10 @@ html
             text-decoration: none
             font-size: 1.2rem
             font-weight: 700
-            line-height: 1.5
             text-transform: uppercase
             border: 1px solid #fff
-            padding: 10px 20px
-            border-radius: 100px
+            padding: 1.7rem 3.2rem
+            border-radius: 10rem
             transition: 0.2s
 
             &:hover
@@ -209,6 +208,7 @@ html
             justify-content: space-around
             align-items: center
             margin-top: 10rem
+
         &-tag
             background-color: #fff
             border-radius: 3rem
@@ -221,6 +221,9 @@ html
             width: 44rem
             border: 0.1rem solid #d7dbe8
             transition: 0.5s
+
+            &:not(:last-of-type)
+                margin-right: 1%
 
             &:hover
                 cursor: pointer 
@@ -271,6 +274,8 @@ html
             margin-top: 4.9rem
             margin-bottom: 6rem
             transition: 0.2s
+            box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5);
+
 
             &:hover
                 transition: 0.2s
@@ -331,12 +336,15 @@ html
         align-items: center
 
         &-menu
-            width: 50%
-
+            width: 70%
             & ul
                 display: flex
-                justify-content: space-around
+                justify-content: flex-end
                 list-style: none
+
+                & li
+                    &:not(:last-of-type)
+                        margin-right: 5.5rem
             
             &-link
                 font-size: 1.4rem
@@ -346,7 +354,6 @@ html
 
         &-get-started
             font-size: 1.2rem
-            margin-left: 100px
             border: 1px solid #fff
             padding: 2.1rem 3.3rem
             border-radius: 100px
