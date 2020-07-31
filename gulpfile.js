@@ -12,7 +12,8 @@ var gulp = require('gulp'), //есть
 	pngquant = require('imagemin-pngquant'), //есть
 	plumber = require('gulp-plumber'), //есть
 	autoprefixer = require('gulp-autoprefixer'),
-	browserSync = require('browser-sync');
+	browserSync = require('browser-sync'),
+	ftp = require( 'vinyl-ftp' );
 
 let path = {
 	js: 'src/js/*.js',
